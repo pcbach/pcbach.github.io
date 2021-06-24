@@ -91,6 +91,18 @@ body {
   padding: 20px;
 }
 
+.main a{
+	color:;
+  text-decoration: none;
+  border-radius: 3px;
+  background: #fc9403;
+  padding: 5px; 
+  border-style: solid;
+  border-width: thin;
+}
+.main a:visited{
+	color:white;
+}
 /* Fake image, just for this example */
 .fakeimg {
   background-color: #aaa;
@@ -124,8 +136,18 @@ body {
 }
 .interest {
   border-radius: 3px;
-  background: #d3d3d3;
+  background: #f1f1f1;
+  padding: 1px; 
+  border-style: solid;
+  display: inline-block;
+ }
+
+.main > .interest {
+	border-radius: 3px;
+  background: #f1f1f1;
   padding: 5px; 
+  border-style: solid;
+  display: inline-block;
 }
 .dropdown {
   position: relative;
@@ -173,6 +195,12 @@ body {
     </div>
   </div>
   <div class="dropdown">
+    <span style="color:white">MATLAB Projects</span>
+    <div class="dropdown-content">
+      <a href = "https://drive.google.com/drive/folders/1sr9mWpAfT0ggqvnUZm4oWlzECGwLGk_n?usp=sharing">Imex Localization</a>
+    </div>
+  </div>
+  <div class="dropdown">
     <span style="color:white">Websites</span>
     <div class="dropdown-content">
       <a href = "file.html">Family Tree</a>
@@ -193,35 +221,90 @@ body {
     <p>Formet student at Hanoi University of Science High School for Gifted Student</p>
     <p>From Hanoi, Vietnam</p>
     <p>Currently base in Melbourne, Australia</p>
-    <a href ="https://www.linkedin.com/in/chi-bach-pham-8580b3195/">Likedin</a>
-    <a href ="https://github.com/pcbach">Github</a>
-    <a href ="https://www.facebook.com/profile.php?id=100009350472829">Facebook</a>
+    <a href ="https://www.linkedin.com/in/chi-bach-pham-8580b3195/">
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Linkedin.png"alt="github"></a>
+    <a href ="https://github.com/pcbach">
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Github.png"alt="github"></a>
+    <a href ="https://www.facebook.com/profile.php?id=100009350472829">
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Facebook.png"alt="github"></a>
     <h3>Interest</h3>
+    <p class = "interest" >Optimization</p>
+    <p class = "interest" >Python</p>
+    <p class = "interest" >C++</p>
+    <p class = "interest" >JavaScript</p>
+    <p class = "interest" >MIPS</p>
+    <p class = "interest" >MATLAB</p>
     <p class = "interest" >Convex Optimization</p>
     <p class = "interest" >Machine Learning</p>
     <p class = "interest" >Computational Mathematics</p>
-    <p class = "interest" >Optimization</p>
   </div>
   <div class="main">
+
+
+
     <h2>Semi-definite approximation of Gaussian Maximum likelihood function</h2>
     <h5>May 29, 2021</h5>
     <img style ="display:block;margin:auto;max-width:30%;height:auto" src="Poster.png" alt="Poster">
-    <a href="LGC.pdf" download> Report </a>
+    <a href="LGC.pdf" download> Report Download </a>
+    <a href="https://github.com/pcbach/LinGaussCov" target="_blank"> Repository </a>
     <p>Final year project at Monash university</p>
-    <p>Developed a semi-definite approximation of the Gaussian Maximum likelihood function. Enabling CVXPY to solve the maximum likelihood estimation ưith option to add linear cóntraints on the covariance</p>
+    <p>Developed a semi-definite approximation of the Gaussian Maximum likelihood function. Enabling CVXPY to solve the maximum likelihood estimation ưith option to add linear contraints on the covariance</p>
+    <p>Tag</p>
+    <p class = "interest" >Convex Optimization</p>
+    <p class = "interest" >Computational Mathematics</p>
+    <p class = "interest" >Optimization</p>
+    <p class = "interest" >Python</p>
+
+
+
     <br>
+
+
     <h2>Family Tree</h2>
     <h5>Jan 11, 2021</h5>
-    <a href="https://github.com/pcbach/FamilyTree"> Repository </a>
-    <br>
-    <a href="file.html"> Website </a>
+    <img style ="display:block;margin:auto;width;max-width:30%;" src="giapha.png" alt="Giapha">
+    <a href="https://github.com/pcbach/FamilyTree"target="_blank"> Repository </a>
+    <a href="file.html"target="_blank"> Website </a>
     <p>Plot a family tree with python from an excel file</p>
+    <p>Tag</p>
+    <p class = "interest" >Python</p>
+
+    <br>
+
+
+    <h2>Viola Jones Face Tracking</h2>
+    <h5>Nov 8, 2020</h5>
+    <img style ="display:block;margin:auto;max-width:100%;height:auto" src="4146prj.png" alt="4146">
+    <a href=https://drive.google.com/drive/folders/1ol5ygfxTrjJ_doUOJenF6TiRJDQdEyqS?usp=sharing target="_blank"> Repository </a>
+    <a href=4146.pdf target="_blank"> Report Download </a>
+    <p>Using MATLAB to implement an optimization algorithm to determine the best location for IMEX location around Melbourne</p>
+    <p>Tag</p>
+    <p class = "interest" >MATLAB</p>
+    <p class = "interest" >Machine Learning</p>
+
+    <br>
+
+
+    <h2>Imex localization</h2>
+    <h5>May 18, 2020</h5>
+    <img style ="display:block;margin:auto;max-width:30%;height:auto" src="imex.png" alt="imex">
+    <a href="https://drive.google.com/drive/folders/1sr9mWpAfT0ggqvnUZm4oWlzECGwLGk_n?usp=sharing" target="_blank"> Repository </a>
+    <p>Using MATLAB to implement an optimization algorithm to determine the best location for IMEX location around Melbourne</p>
+    <p>Tag</p>
+    <p class = "interest" >MATLAB</p>
+    <p class = "interest" >Optimization</p>
+
+    <br>
+
+
     <h2>Fake 2048</h2>
     <h5>Dec 14, 2017</h5>
-    <a href="https://github.com/pcbach/2048fake"> Repository </a>
-    <br>
-    <a href="https://fake2048.herokuapp.com/"> Website </a>
+    <img style ="display:block;margin:auto;max-width:30%;height:auto" src="2048.png" alt="imex">
+    <a href="https://github.com/pcbach/2048fake"target="_blank"> Repository </a>
+    <a href="https://fake2048.herokuapp.com/"target="_blank"> Website </a>
     <p>Fake 2048</p>
+    <p>Tag</p>
+    <p class = "interest" >Javascript</p>
   </div>
 </div>
 
