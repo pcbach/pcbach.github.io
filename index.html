@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Park Pham Portfolio</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Park Pham Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
 * {
   box-sizing: border-box;
@@ -30,10 +30,10 @@ body {
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
 .navbar {
-  height: 50px;
+  display: flex;
   background-color: #333;
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   top: 0;
 }
 
@@ -70,22 +70,23 @@ body {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-   width:15%;
-  /*-ms-flex: 15%; 
-  flex: 15%;*/
+  -ms-flex: 15%; 
+  flex: 15%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
-.main {   
-  width:85%;
+.main {  
+  -ms-flex: 85%; 
+  flex: 85%; 
   background-color: white;
   padding: 20px;
 }
@@ -105,15 +106,18 @@ body {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 70em){
   .row {   
     flex-direction: column;
   }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
+@media screen and (max-width: 50em) {
+  .navbar{
+  	flex-direction: column;
+  }
+  .navbar > .dropdown {
     float: none;
     width: 100%;
   }
@@ -184,7 +188,7 @@ body {
 <div class="row">
   <div class="side">
     <h2>About Me</h2>
-    <img style ="display:block;margin:auto;width:80%" src="pic.jpg" alt="Face">
+    <img style ="display:block;margin:auto;width" src="pic.jpg" alt="Face">
     <p>Final year Electrical and Computer System Engineering student at Monash university</p>
     <p>Formet student at Hanoi University of Science High School for Gifted Student</p>
     <p>From Hanoi, Vietnam</p>
