@@ -76,16 +76,16 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 15%; /* IE10 */
-  flex: 15%;
+   width:15%;
+  /*-ms-flex: 15%; 
+  flex: 15%;*/
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
 .main {   
-  -ms-flex: 85%; /* IE10 */
-  flex: 85%;
+  width:85%;
   background-color: white;
   padding: 20px;
 }
@@ -184,7 +184,7 @@ body {
 <div class="row">
   <div class="side">
     <h2>About Me</h2>
-    <img style ="display:block;margin:auto;" src="pic.jpg" alt="Face">
+    <img style ="display:block;margin:auto;width:80%" src="pic.jpg" alt="Face">
     <p>Final year Electrical and Computer System Engineering student at Monash university</p>
     <p>Formet student at Hanoi University of Science High School for Gifted Student</p>
     <p>From Hanoi, Vietnam</p>
