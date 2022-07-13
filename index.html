@@ -88,16 +88,16 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 25%; 
-  flex: 25%;
+  -ms-flex: 20%; 
+  flex: 20%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
 .main {  
-  -ms-flex: 75%; 
-  flex: 75%; 
+  -ms-flex: 80%; 
+  flex: 80%; 
   background-color: white;
   padding: 20px;
 }
@@ -141,6 +141,7 @@ p{
 @media screen and (max-width: 40em) {
   .navbar{
   	flex-direction: column;
+    position:relative;
   }
   .navbar > .dropdown {
     float: none;
@@ -228,8 +229,8 @@ p{
   <div class="dropdown">
     <span style="color:white">Websites</span>
     <div class="dropdown-content">
-      <a href = "file.html">Family Tree</a>
-      <a href = "https://fake2048.herokuapp.com/">Fake 2048</a>
+      <a href = "file.html"target="_blank">Family Tree</a>
+      <a href = "https://fake2048.herokuapp.com/"target="_blank">Fake 2048</a>
     </div>
   </div>
   <a href = "index2.html" style = "margin-left:auto;margin-right: 0;">Non serious stuff</a>
@@ -249,14 +250,18 @@ p{
     <p>Former student at Hanoi University of Science High School for Gifted Student</p>
     <p>From Hanoi, Vietnam</p>
     <p>Currently base in Melbourne, Australia</p>
-    <a href ="https://www.linkedin.com/in/chi-bach-pham-8580b3195/">
+    <a href="Resume.pdf" style = "color: white;text-decoration: none;border-radius: 3px;background: #fc9403;padding: 5px; border-style: solid;border-width: thin;" download target="_blank">Resume</a>
+    <br>
+    <br>
+    <a href ="https://www.linkedin.com/in/chi-bach-pham-8580b3195/"target="_blank">
     <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Linkedin.png"alt="github"></a>
-    <a href ="https://github.com/pcbach">
+    <a href ="https://github.com/pcbach"target="_blank">
     <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Github.png"alt="github"></a>
-    <a href ="https://www.facebook.com/profile.php?id=100009350472829">
+    <a href ="https://www.facebook.com/profile.php?id=100009350472829"target="_blank">
     <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Facebook.png"alt="github"></a>
-    <a href ="https://www.monash.edu/engineering/chibachpham">
+    <a href ="https://www.monash.edu/engineering/chibachpham"target="_blank">
     <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="monashlogo.png"alt="github"></a>
+    
     <h3>Skills</h3>
     <p class = "interest" >C/C++</p>
     <p class = "interest" > Python</p>
