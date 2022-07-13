@@ -2,31 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Park Pham Portfolio</title>
+<title>Chi Pham</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
 * {
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: quyetthang;
+    src: url('CBP-QuyetThangv2.ttf');
+}
 /* Style the body */
 body {
   font-family: Monospace, Lucida Console, sans-serif;
   margin: 0;
 }
-
 /* Header/logo Title */
 .header {
-  padding: 80px;
+  padding: 20px;
   text-align: center;
   background: #fc9403;
   color: white;
 }
 
 /* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
+.header {
+  font-family: quyetthang;
+  font-size: 80px;
 }
+
+
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
 .navbar {
@@ -45,9 +51,14 @@ body {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  font-family: quyetthang;
+  font-size: 30px;
 }
 
-
+.navbar span{
+  font-family: quyetthang;
+  font-size: 30px;
+}
 /* Right-aligned link */
 .navbar a.right {
   float: right;
@@ -77,16 +88,16 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 15%; 
-  flex: 15%;
+  -ms-flex: 25%; 
+  flex: 25%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
 .main {  
-  -ms-flex: 85%; 
-  flex: 85%; 
+  -ms-flex: 75%; 
+  flex: 75%; 
   background-color: white;
   padding: 20px;
 }
@@ -109,7 +120,9 @@ body {
   width: 100%;
   padding: 20px;
 }
-
+p{
+  margin: 5px;
+}
 /* Footer */
 .footer {
   padding: 20px;
@@ -118,14 +131,14 @@ body {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 70em){
+@media screen and (max-width: 40em){
   .row {   
     flex-direction: column;
   }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 40em) {
   .navbar{
   	flex-direction: column;
   }
@@ -135,19 +148,21 @@ body {
   }
 }
 .interest {
-  border-radius: 3px;
+  border-radius: 1px;
   background: #f1f1f1;
-  padding: 1px; 
+  padding: 1px 1px 1px 1px; 
   border-style: solid;
   display: inline-block;
+  margin:0;
  }
 
 .main > .interest {
 	border-radius: 3px;
   background: #f1f1f1;
-  padding: 5px; 
+  padding: 1px 1px 1px 1px; 
   border-style: solid;
   display: inline-block;
+  margin:0;
 }
 .dropdown {
   position: relative;
@@ -176,29 +191,38 @@ body {
 <body>
 
 <div class="header">
-  <h1>Portfolio</h1>
-  <p>Chi Bach (Park) Pham</p>
+  Chí Bách Phạm
 </div>
 
 <div class="navbar">
   <div class="dropdown">
-    <span style="color:white">Python Projects</span>
+    <span style="color:white">Python</span>
     <div class="dropdown-content">
       <a href = "#FamilyTree">Family Tree</a>
       <a href = "#LGC">Gaussian Approximation</a>
     </div>
   </div>
   <div class="dropdown">
-    <span style="color:white">Javascript Project</span>
+    <span style="color:white">Javascript</span>
     <div class="dropdown-content">
       <a href = "#2048">Fake 2048</a>
     </div>
   </div>
   <div class="dropdown">
-    <span style="color:white">MATLAB Projects</span>
+    <span style="color:white">MATLAB</span>
     <div class="dropdown-content">
-      <a href = "#imex">Imex Localization</a>
-      <a href = "#VJ">Viola-John Face Detection</a>
+      <a href = "#imex">IMEX Location</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <span style="color:white">R</span>
+    <div class="dropdown-content">
+      <a href = "#spgmle">SP-GMLE</a>
+    </div>
+  </div> <div class="dropdown">
+    <span style="color:white">Julia</span>
+    <div class="dropdown-content">
+      <a href = "#mesdp">MESDP</a>
     </div>
   </div>
   <div class="dropdown">
@@ -208,6 +232,7 @@ body {
       <a href = "https://fake2048.herokuapp.com/">Fake 2048</a>
     </div>
   </div>
+  <a href = "index2.html" style = "margin-left:auto;margin-right: 0;">Non serious stuff</a>
   <!--<a href="#" class="active">Home</a>
   <a href="#">Python</a>
   <a href="#">Research</a>
@@ -217,9 +242,11 @@ body {
 <div class="row">
   <div class="side">
     <h2>About Me</h2>
-    <img style ="display:block;margin:auto;width" src="pic.jpg" alt="Face">
-    <p>Final year Electrical and Computer System Engineering student at Monash university</p>
-    <p>Formet student at Hanoi University of Science High School for Gifted Student</p>
+    <img style ="display:block;margin:auto;max-width:50%;height:auto" src="pic.jpg" alt="Face">
+    <p>Master of Engineering Science student at Monash university</p>
+    <p>Teaching associate for ECE2071, ECE2072, ECE3073 and ECE4132 at Monash university </p>
+    <p>Graduated in Bachelor of Electrical and Computer System Engineering (Honours) at Monash University in 2021</p>
+    <p>Former student at Hanoi University of Science High School for Gifted Student</p>
     <p>From Hanoi, Vietnam</p>
     <p>Currently base in Melbourne, Australia</p>
     <a href ="https://www.linkedin.com/in/chi-bach-pham-8580b3195/">
@@ -228,39 +255,66 @@ body {
     <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Github.png"alt="github"></a>
     <a href ="https://www.facebook.com/profile.php?id=100009350472829">
     <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Facebook.png"alt="github"></a>
+    <a href ="https://www.monash.edu/engineering/chibachpham">
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="monashlogo.png"alt="github"></a>
+    <h3>Skills</h3>
+    <p class = "interest" >C/C++</p>
+    <p class = "interest" > Python</p>
+    <p class = "interest" >  MATLAB</p>
+    <p class = "interest" >  R</p>
+    <p class = "interest" >  JavaScript</p>
+    <p class = "interest" >   Julia</p>
+    <p class = "interest" >   LATEX</p>
     <h3>Interest</h3>
     <p class = "interest" >Optimization</p>
-    <p class = "interest" >Python</p>
-    <p class = "interest" >C++</p>
-    <p class = "interest" >JavaScript</p>
-    <p class = "interest" >MIPS</p>
-    <p class = "interest" >MATLAB</p>
     <p class = "interest" >Convex Optimization</p>
     <p class = "interest" >Machine Learning</p>
     <p class = "interest" >Computational Mathematics</p>
   </div>
   <div class="main">
 
+  <div id = "mesdp">
+    <h2>Memory efficient semi definite programming solver for Max-cut problem (WIP)</h2>
+    <h5>Jul 13, 2022</h5>
+    <a href="https://github.com/pcbach/MESDP" target="_blank"> Repository </a>
+    <p>Master degree project</p>
+    <p>Aim to develop a method to solve the maxcut problem with better memory efficiency</p>
+    <h3>Tag</h3>
+    <p class = "interest" >Convex Optimization</p>
+    <p class = "interest" >Computational Mathematics</p>
+    <p class = "interest" >Optimization</p>
+    <p class = "interest" >Julia</p>
+  </div>
 
+  <div id = "spgmle">
+    <h2>Covariance-constrained Gaussian Maximum Likelihood Estimation via semidefinite approximations (WIP)</h2>
+    <h5>Jan 19, 2022</h5>
+    <a href="https://github.com/pcbach/SP-GMLE" target="_blank"> Repository </a>
+    <p>Developed a semi-definite approximation of an interval of the Gaussian Maximum likelihood function using Gaussian quadrature. Enabling CVXR to solve the maximum likelihood estimation with option to add linear contraints on the covariance</p>
+    <h3>Tag</h3>
+    <p class = "interest" >Convex Optimization</p>
+    <p class = "interest" >Computational Mathematics</p>
+    <p class = "interest" >Optimization</p>
+    <p class = "interest" >R</p>
+  </div>
 
-    <div id = "LGC">
+  <div id = "LGC">
     <h2>Semi-definite approximation of Gaussian Maximum likelihood function</h2>
     <h5>May 29, 2021</h5>
     <img style ="display:block;margin:auto;max-width:30%;height:auto" src="Poster.png" alt="Poster">
     <a href="LGC.pdf" download> Report Download </a>
     <a href="https://github.com/pcbach/LinGaussCov" target="_blank"> Repository </a>
     <p>Final year project at Monash university</p>
-    <p>Developed a semi-definite approximation of the Gaussian Maximum likelihood function. Enabling CVXPY to solve the maximum likelihood estimation ưith option to add linear contraints on the covariance</p>
-    <p>Tag</p>
+    <p>Developed a semi-definite approximation of the Gaussian Maximum likelihood function using line segments. Enabling CVXPY to solve the maximum likelihood estimation with option to add linear contraints on the covariance</p>
+    <h3>Tag</h3>
     <p class = "interest" >Convex Optimization</p>
     <p class = "interest" >Computational Mathematics</p>
     <p class = "interest" >Optimization</p>
     <p class = "interest" >Python</p>
-    </div>
+  </div>
 
 
 
-    <br>
 
     <div id = "FamilyTree">
     <h2>Family Tree</h2>
@@ -269,7 +323,7 @@ body {
     <a href="https://github.com/pcbach/FamilyTree"target="_blank"> Repository </a>
     <a href="file.html"target="_blank"> Website </a>
     <p>Plot a family tree with python from an excel file</p>
-    <p>Tag</p>
+    <h3>Tag</h3>
     <p class = "interest" >Python</p>
 	</div>
 
@@ -282,13 +336,12 @@ body {
     <img style ="display:block;margin:auto;max-width:30%;height:auto" src="imex.png" alt="imex">
     <a href="https://drive.google.com/drive/folders/1sr9mWpAfT0ggqvnUZm4oWlzECGwLGk_n?usp=sharing" target="_blank"> Repository </a>
     <p>Using MATLAB to implement an optimization algorithm to determine the best location for IMEX location around Melbourne</p>
-    <p>Tag</p>
+    <h3>Tag</h3>
     <p class = "interest" >MATLAB</p>
     <p class = "interest" >Optimization</p>
 	</div>
 
 
-    <br>
 
 
     <div id = "2048">
@@ -298,7 +351,7 @@ body {
     <a href="https://github.com/pcbach/2048fake"target="_blank"> Repository </a>
     <a href="https://fake2048.herokuapp.com/"target="_blank"> Website </a>
     <p>Fake 2048</p>
-    <p>Tag</p>
+    <h3>Tag</h3>
     <p class = "interest" >Javascript</p>
 	</div>
 
@@ -306,9 +359,7 @@ body {
   </div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+
 
 </body>
 </html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chi Pham</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: quyetthang;
+    src: url('CBP-QuyetThangv2.ttf');
+}
+/* Style the body */
+body {
+  font-family: Monospace, Lucida Console, sans-serif;
+  margin: 0;
+}
+/* Header/logo Title */
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #fc9403;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header {
+  font-family: quyetthang;
+  font-size: 80px;
+}
+
+
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  display: flex;
+  background-color: #333;
+  /*position: -webkit-sticky;*/
+  position: sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-family: quyetthang;
+  font-size: 30px;
+}
+
+.navbar span{
+  font-family: quyetthang;
+  font-size: 30px;
+}
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 25%; 
+  flex: 25%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {  
+  -ms-flex: 75%; 
+  flex: 75%; 
+  background-color: white;
+  padding: 20px;
+}
+
+.main a{
+	color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  background: #fc9403;
+  padding: 5px; 
+  border-style: solid;
+  border-width: thin;
+}
+.main a:visited{
+	color:white;
+}
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+p{
+  margin: 5px;
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 40em){
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 50em) {
+  .navbar{
+  	flex-direction: column;
+  }
+  .navbar > .dropdown {
+    float: none;
+    width: 100%;
+  }
+}
+.interest {
+  border-radius: 1px;
+  background: #f1f1f1;
+  padding: 1px 1px 1px 1px; 
+  border-style: solid;
+  display: inline-block;
+  margin:0;
+ }
+
+.main > .interest {
+	border-radius: 3px;
+  background: #f1f1f1;
+  padding: 1px 1px 1px 1px; 
+  border-style: solid;
+  display: inline-block;
+  margin:0;
+}
+.dropdown {
+  position: relative;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fc9403;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  Chí Bách Phạm
+</div>
+
+<div class="navbar">
+  <a href = "index.html" style = " margin-left:auto;margin-right: 0;">Serious stuff</a>
+  <!--<a href="#" class="active">Home</a>
+  <a href="#">Python</a>
+  <a href="#">Research</a>
+  <a href="#">MATLAB</a> -->
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <img style ="display:block;margin:auto;max-width:50%;height:auto" src="pic.jpg" alt="Face">
+    <p>In my freetime, I also do photography and drawing. 
+    <h3>Skills</h3>
+    <p class = "interest" >Photoshop</p>
+    <p class = "interest" >Illustrator</p>
+    <p class = "interest" >FontForge</p>
+    <h3>Interest</h3>
+    <p class = "interest" >Vexillology</p>
+    <p class = "interest" >Typography</p>
+    <p class = "interest" >Logo Design</p>
+  </div>
+  <div class="main">
+    <div id = "Quyetthang">
+    <h2>CBP Quyetthang v2</h2>
+    <h5>Jul 13, 2021</h5>
+    <p style="font-family: quyetthang;font-size:50px; margin=70px;" align="center" >"Nước Việt Nam là một</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">dân tộc Việt Nam là một.</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">Sông có thể cạn,</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">núi có thể mòn</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">song chân lý ấy</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">không bao giờ thay đổi"</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="right">- Hồ Chí Minh</p>
+    <br>
+    <a href="CBP-QuyetThangv2.ttf" download> Free Download </a>
+    <p>You might have noticed the font on the header and the navigation bar. It is actually designed by me. Feel free to try it out with the link below!</p>
+    <h3>Tag</h3>
+    <p class = "interest" >FontForge</p>
+    <p class = "interest" >Illustrator</p>
+	</div>
+  </div>
+</div>
+
+
+</body>
+</html>
