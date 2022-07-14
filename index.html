@@ -13,6 +13,10 @@
     font-family: quyetthang;
     src: url('CBP-QuyetThangv2.ttf');
 }
+@font-face {
+    font-family: quyetthang1;
+    src: url('CBP-QuyetThang.ttf');
+}
 /* Style the body */
 body {
   font-family: Monospace, Lucida Console, sans-serif;
@@ -87,7 +91,7 @@ body {
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
-.side {
+[class ^= side] {
   -ms-flex: 20%; 
   flex: 20%;
   background-color: #f1f1f1;
@@ -166,7 +170,7 @@ p{
   display: inline-block;
   margin:0;
 }
-.dropdown {
+[class |= dropdown] {
   position: relative;
   float: left;
   display: block;
@@ -176,16 +180,17 @@ p{
   text-decoration: none;
 }
 
-.dropdown-content {
+.dropdown-content{
   display: none;
   position: absolute;
+  top: 70px;
   background-color: #fc9403;
   min-width: 160px;
   padding: 12px 16px;
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+[class |= dropdown]:hover .dropdown-content {
   display: block;
 }
 </style>
@@ -196,24 +201,50 @@ p{
   Chí Bách Phạm
 </div>
 
+<h3 class = "message" style = "color:white;font-family: quyetthang;font-size: 20px;background-color: #333; margin : 0px;height :30px;white-space: pre-wrap;">                 So Empty! Click on a button for relevant project</h3>
 <div class="navbar">
+  <div class="dropdown-serious">
+    <a onclick="showProject(0);changeStatus(0);" class="navbarButton">Python</a>
+  </div>
+  <div class="dropdown-serious">
+    <a onclick="showProject(1);changeStatus(1);"class="navbarButton">Julia</a>
+  </div>
+  <div class="dropdown-serious">
+    <a onclick="showProject(2);changeStatus(2);"class="navbarButton">R</a>
+  </div>
+  <div class="dropdown-serious">
+    <a onclick="showProject(3);changeStatus(3);"class="navbarButton">MATLAB</a>
+  </div>
+  <div class="dropdown-serious">
+    <a onclick="showProject(4);changeStatus(4);"class="navbarButton">JavaScript</a>
+  </div>
+  <div class="dropdown-serious">
+    <a style="color:white">Websites</a>
+    <div class="dropdown-content">
+      <a href = "file.html"target="_blank">Family Tree</a>
+      <a href = "https://fake2048.herokuapp.com/"target="_blank">Fake 2048</a>
+    </div>
+  </div>
+  <div class="dropdown-nonserious" style="display:none;">
+    <a onclick="showProject(5);changeStatus(5);" class="navbarButton">Font</a>
+  </div>
+  <!--
   <div class="dropdown">
     <span style="color:white">Python</span>
     <div class="dropdown-content">
-      <a href = "#FamilyTree">Family Tree</a>
       <a href = "#LGC">Gaussian Approximation</a>
     </div>
   </div>
   <div class="dropdown">
     <span style="color:white">Javascript</span>
     <div class="dropdown-content">
-      <a href = "#2048">Fake 2048</a>
+      <a href = "#2048" onclick="myFunction()">Fake 2048</a>
     </div>
   </div>
   <div class="dropdown">
     <span style="color:white">MATLAB</span>
     <div class="dropdown-content">
-      <a href = "#imex">IMEX Location</a>
+      <a href = "#imex" >IMEX Location</a>
     </div>
   </div>
   <div class="dropdown">
@@ -234,7 +265,14 @@ p{
       <a href = "https://fake2048.herokuapp.com/"target="_blank">Fake 2048</a>
     </div>
   </div>
-  <a href = "index2.html" style = "margin-left:auto;margin-right: 0;">Non serious stuff</a>
+  -->
+
+  <div class="dropdown-serious"style = "margin-left:auto;margin-right: 0;">
+    <a onclick="changeSerious()">Non serious stuff</a>
+  </div>
+  <div class="dropdown-nonserious"style = "margin-left:auto;margin-right: 0;display:none">
+    <a onclick="changeSerious()">Serious stuff</a>
+  </div>
   <!--<a href="#" class="active">Home</a>
   <a href="#">Python</a>
   <a href="#">Research</a>
@@ -242,7 +280,7 @@ p{
 </div>
 
 <div class="row">
-  <div class="side">
+  <div class="side-serious">
     <h2>About Me</h2>
     <img style ="display:block;margin:auto;max-width:50%;height:auto" src="pic.jpg" alt="Face">
     <p>Master of Engineering Science student at Monash university</p>
@@ -277,9 +315,27 @@ p{
     <p class = "interest" >Machine Learning</p>
     <p class = "interest" >Computational Mathematics</p>
   </div>
+
+
+
+
+<div class="side-nonserious" style="display:none">
+    <h2>About Me</h2>
+    <img style ="display:block;margin:auto;max-width:50%;height:auto" src="pic.jpg" alt="Face">
+    <p>In my freetime, I also do photography and drawing. 
+    <h3>Skills</h3>
+    <p class = "interest" >Photoshop</p>
+    <p class = "interest" >Illustrator</p>
+    <p class = "interest" >FontForge</p>
+    <h3>Interest</h3>
+    <p class = "interest" >Vexillology</p>
+    <p class = "interest" >Typography</p>
+    <p class = "interest" >Logo Design</p>
+  </div>
+
   <div class="main">
 
-  <div id = "mesdp">
+  <div id = "mesdp" class = "juliaProject" style = "display : none">
     <h2>Memory efficient semi definite programming solver for Max-cut problem (WIP)</h2>
     <h5>Jul 13, 2022</h5>
     <a href="https://github.com/pcbach/MESDP" target="_blank"> Repository </a>
@@ -292,7 +348,7 @@ p{
     <p class = "interest" >Julia</p>
   </div>
 
-  <div id = "spgmle">
+  <div id = "spgmle" class = "rlangProject" style = "display : none">
     <h2>Covariance-constrained Gaussian Maximum Likelihood Estimation via semidefinite approximations (WIP)</h2>
     <h5>Jan 19, 2022</h5>
     <a href="https://github.com/pcbach/SP-GMLE" target="_blank"> Repository </a>
@@ -304,7 +360,7 @@ p{
     <p class = "interest" >R</p>
   </div>
 
-  <div id = "LGC">
+  <div id = "LGC" class = "pythonProject"style = "display : none">
     <h2>Semi-definite approximation of Gaussian Maximum likelihood function</h2>
     <h5>May 29, 2021</h5>
     <img style ="display:block;margin:auto;min-width:400px;max-width:30%;height:auto" src="Poster.png" alt="Poster">
@@ -322,7 +378,7 @@ p{
 
 
 
-    <div id = "FamilyTree">
+    <div id = "FamilyTree" class = "pythonProject"style = "display : none">
     <h2>Family Tree</h2>
     <h5>Jan 11, 2021</h5>
     <img style ="display:block;margin:auto;min-width:400px;max-width:30%;" src="giapha.png" alt="Giapha">
@@ -336,7 +392,7 @@ p{
 
     
 
-    <div id = "imex">
+    <div id = "imex" class = "matlabProject"style = "display : none">
     <h2>Imex localization</h2>
     <h5>May 18, 2020</h5>
     <img style ="display:block;margin:auto;min-width:400px;max-width:30%;height:auto" src="imex.png" alt="imex">
@@ -350,7 +406,7 @@ p{
 
 
 
-    <div id = "2048">
+    <div id = "2048" class = "jsProject" style = "display : none">
     <h2>Fake 2048</h2>
     <h5>Dec 14, 2017</h5>
     <img style ="display:block;margin:auto;min-width:400px;max-width:30%;height:auto" src="2048.png" alt="imex">
@@ -361,6 +417,38 @@ p{
     <p class = "interest" >Javascript</p>
 	</div>
 
+    <div id = "Quyetthang2" class = "fontProject" style = "display : none">
+    <h2>CBP Quyetthang v2</h2>
+    <h5>Jul 13, 2021</h5>
+    <p style="font-family: quyetthang;font-size:50px;" align="center" >"Nước Việt Nam là một</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">dân tộc Việt Nam là một.</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">Sông có thể cạn,</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">núi có thể mòn</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">song chân lý ấy</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="center">không bao giờ thay đổi"</p>
+    <p style="font-family: quyetthang;font-size:50px;" align="right">- Hồ Chí Minh</p>
+    <br>
+    <a href="CBP-QuyetThangv2.ttf" download> Free Download </a>
+    <p>You might have noticed the font on the header and the navigation bar. It is actually designed by me. Feel free to try it out with the link below!</p>
+    <h3>Tag</h3>
+    <p class = "interest" >FontForge</p>
+    <p class = "interest" >Illustrator</p>
+	</div>
+
+  <div id = "Quyetthang1" class = "fontProject" style = "display : none">
+    <h2>CBP Quyetthang</h2>
+    <h5>Jul 13, 2021</h5>
+    <p style="font-family: quyetthang1;font-size:70px;" align="center" >"Hỡi ai </p>
+    <p style="font-family: quyetthang1;font-size:70px;" align="center" >yêu nước thương nòi</p>
+    <p style="font-family: quyetthang1;font-size:70px;" align="center" >Trở về Tổ quốc</p>
+    <p style="font-family: quyetthang1;font-size:70px;" align="center" >giết loài thực dân."</p>
+    <br>
+    <a href="CBP-QuyetThang.ttf" download> Free Download </a>
+    <p>My older version. Feel free to try it out with the link below!</p>
+    <h3>Tag</h3>
+    <p class = "interest" >FontForge</p>
+    <p class = "interest" >Illustrator</p>
+	</div>
 
   </div>
 </div>
@@ -368,4 +456,99 @@ p{
 
 
 </body>
+<script>
+function showProject(x) {
+  var topic = ["python","julia","rlang","matlab","js","font"];
+  const collection = document.querySelectorAll('[class ^= '+topic[x]+']');
+  //console.log(collection);
+  for (let i = 0; i < collection.length; i++) {
+    var x = collection[i];
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+}
+var clicked = [false,false,false,false,false,false];
+function changeStatus(x) {
+  if (x >= 0){
+    clicked[x] = !clicked[x];
+  }
+  const collection = document.getElementsByClassName("navbarButton");
+  var check = true;
+  for (let i = 0; i < collection.length; i++) {
+    var x = collection[i];
+    //console.log(x);
+    if(clicked[i]){
+      x.style.color = "#fc9403";
+      check = false;
+    }else{
+      x.style.color = "white";
+    }
+  }
+  const msg = document.getElementsByClassName("message");
+  if(check){
+    msg[0].innerHTML = "                 So Empty! Click on a button for relevant project";
+  }else{
+    msg[0].innerHTML = " ";
+  }
+
+}
+  var serious = true;
+  var split = 5;
+  function changeSerious() {
+    serious = !serious;
+    const collection = document.querySelectorAll('[class|= dropdown]');
+    for (let i = 0; i < collection.length; i++) {
+      var x = collection[i];
+      if(serious){
+        if (x.className === "dropdown-serious"){
+          x.style.display = "block";
+        }else if (x.className === "dropdown-nonserious"){
+          x.style.display = "none";
+        }
+      }else{
+        if (x.className === "dropdown-serious"){
+          x.style.display = "none";
+        }else if (x.className === "dropdown-nonserious"){
+          x.style.display = "block";
+        }
+      }
+    }
+    const collection2 = document.querySelectorAll('[class|= side]');
+    for (let i = 0; i < collection2.length; i++) {
+      var x = collection2[i];
+      if(serious){
+        if (x.className === "side-serious"){
+          x.style.display = "block";
+        }else if (x.className === "side-nonserious"){
+          x.style.display = "none";
+        }
+      }else{
+        if (x.className === "side-serious"){
+          x.style.display = "none";
+        }else if (x.className === "side-nonserious"){
+          x.style.display = "block";
+        }
+      }
+    }
+    if (!serious){
+      for (let i = 0; i < 5; i++) {
+        if (clicked[i]){
+          showProject(i);
+          changeStatus(i);
+        }
+      }
+    }else{
+      for (let i = 5; i < clicked.length; i++) {
+        if (clicked[i]){
+          showProject(i);
+          changeStatus(i);
+        }
+      }
+    }
+    
+  }
+</script>
 </html>
