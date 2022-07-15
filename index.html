@@ -190,6 +190,21 @@ p{
   z-index: 1;
 }
 
+
+.gallery .square{
+  float:left;
+  margin:0px;
+  width:33.33%;
+  height:auto;
+  padding:0px;
+}
+.gallery .rectangle{
+  float:left;
+  margin:0px;
+  width:50%;
+  height:auto;
+  padding:0px;
+}
 [class |= dropdown]:hover .dropdown-content {
   display: block;
 }
@@ -227,6 +242,9 @@ p{
   </div>
   <div class="dropdown-nonserious" style="display:none;">
     <a onclick="showProject(5);changeStatus(5);" class="navbarButton">Font</a>
+  </div>
+  <div class="dropdown-nonserious" style="display:none;">
+    <a onclick="showProject(6);changeStatus(6);" class="navbarButton">Picture</a>
   </div>
   <!--
   <div class="dropdown">
@@ -266,13 +284,14 @@ p{
     </div>
   </div>
   -->
-
+<!--
   <div class="dropdown-serious"style = "margin-left:auto;margin-right: 0;">
     <a onclick="changeSerious()">Non serious stuff</a>
   </div>
   <div class="dropdown-nonserious"style = "margin-left:auto;margin-right: 0;display:none">
     <a onclick="changeSerious()">Serious stuff</a>
   </div>
+-->
   <!--<a href="#" class="active">Home</a>
   <a href="#">Python</a>
   <a href="#">Research</a>
@@ -458,7 +477,7 @@ p{
 </body>
 <script>
 function showProject(x) {
-  var topic = ["python","julia","rlang","matlab","js","font"];
+  var topic = ["python","julia","rlang","matlab","js","font","picture"];
   const collection = document.querySelectorAll('[class ^= '+topic[x]+']');
   //console.log(collection);
   for (let i = 0; i < collection.length; i++) {
@@ -470,7 +489,7 @@ function showProject(x) {
     }
   }
 }
-var clicked = [false,false,false,false,false,false];
+var clicked = [false,false,false,false,false,false,false];
 function changeStatus(x) {
   if (x >= 0){
     clicked[x] = !clicked[x];
