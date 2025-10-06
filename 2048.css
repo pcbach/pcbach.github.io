@@ -1,0 +1,66 @@
+[id*=block] {	
+	vertical-align:top;
+	display: inline-block;
+	position: relative;
+	width: 17.5vh;
+	height:17.5vh;
+	text-align: center;
+	margin-left: -2px;
+	margin-right: -2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+[id*=row] {
+	margin: 0 calc((100vw - 70vh - 16px)/2) 0 calc((100vw - 70vh - 16px)/2);
+	overflow: hidden;
+}
+[id*=score] {
+	position: relative;
+	font-size: 5vh;
+	height:10vh;
+	overflow: hidden;
+	text-align: center;
+}
+[id*=score] > p {
+	line-height: 10vh;
+}
+[class=blank] {
+	background-color: #f44242;
+}
+[class=n2]{
+	background-color: #f48c41;
+}
+[class=n4]{
+	background-color: #f4ca41;
+}
+[class=n8]{
+	background-color: #e8f441;
+}
+[class=n16]{
+	background-color: #88f441;
+}
+[class=n32]{
+	background-color: #41f48e;
+}
+[class=n64]{
+	background-color: #41f4e8;
+}
+[class=n128]{
+	background-color: #41a3f4;
+}
+[class=n256]{
+	background-color: #4158f4;
+}
+[class=n512]{
+	background-color: #8b41f4;
+}
+[class=n1024]{
+	background-color: #ee41f4;
+}
+
+p {
+	margin: 0px;
+	font-size: 8vh;
+	line-height:20vh;
+}

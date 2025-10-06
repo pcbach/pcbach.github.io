@@ -11,28 +11,37 @@
 
 @font-face {
     font-family: quyetthang;
-    src: url('CBP-QuyetThangv2.ttf');
+    src: url('Font/CBP-QuyetThangv2.ttf');
 }
 @font-face {
     font-family: quyetthang1;
-    src: url('CBP-QuyetThang.ttf');
+    src: url('Font/CBP-QuyetThang.ttf');
 }
+@font-face {
+  font-family: CMU-Serif;
+  src: url('Font/cmunrm.ttf');
+}
+@font-face {
+  font-family: CMU-Sans-Serif;
+  src: url('Font/cmunss.ttf');
+}
+
 /* Style the body */
 body {
-  font-family: Monospace, Lucida Console, sans-serif;
+  font-family: CMU-Serif;/*CMU-Sans-Serif; /* Monospace, Lucida Console, sans-serif;*/
   margin: 0;
 }
 /* Header/logo Title */
 .header {
   padding: 20px;
   text-align: center;
-  background: #fc9403;
+  background: #333;
   color: white;
 }
 
 /* Increase the font size of the heading */
 .header {
-  font-family: quyetthang1;
+  font-family: CMU-Serif;
   font-size: 80px;
 }
 
@@ -55,12 +64,12 @@ body {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
-  font-family: quyetthang;
+  font-family: CMU-Serif;
   font-size: 30px;
 }
 
 .navbar span{
-  font-family: quyetthang;
+  font-family: CMU-Serif;
   font-size: 30px;
 }
 /* Right-aligned link */
@@ -105,19 +114,26 @@ body {
   background-color: white;
   padding: 20px;
 }
-
+.main a.publicationDownload{
+  text-decoration: underline;
+  background: none;
+  color: black;
+  border-style: none;
+  padding: 0px; 
+  font-weight: bold;
+}
 .main a{
 	color: white;
   text-decoration: none;
   border-radius: 3px;
-  background: #fc9403;
+  background: #555555;
   padding: 5px; 
   border-style: solid;
   border-width: thin;
 }
-.main a:visited{
+/* .main a:visited{
 	color:white;
-}
+} */
 /* Fake image, just for this example */
 .fakeimg {
   background-color: #aaa;
@@ -125,7 +141,7 @@ body {
   padding: 20px;
 }
 p{
-  margin: 5px;
+  margin: 1px;
 }
 /* Footer */
 .footer {
@@ -156,20 +172,22 @@ p{
 .interest {
   border-radius: 1px;
   background: #f1f1f1;
-  padding: 1px 1px 1px 1px; 
+  padding: 2px 2px 2px 2px; 
   border-style: solid;
+  border-width: 1px;
   display: inline-block;
   margin:0;
  }
 
 .main > .interest {
-	border-radius: 3px;
+  border-radius: 1px;
   background: #f1f1f1;
-  padding: 1px 1px 1px 1px; 
+  padding: 2px 2px 2px 2px; 
   border-style: solid;
+  border-width: 1px;
   display: inline-block;
   margin:0;
-}
+ }
 [class |= dropdown] {
   position: relative;
   float: left;
@@ -184,13 +202,19 @@ p{
   display: none;
   position: absolute;
   top: 70px;
-  background-color: #fc9403;
+  background-color: #555555;
   min-width: 160px;
   padding: 12px 16px;
   z-index: 1;
 }
 
-
+div.publicationBox{
+  color:#333;
+  background-color: #efefef;
+  padding: 10px;
+  display: flow-root;
+  border-radius: 10px; 
+}
 .gallery .square{
   float:left;
   margin:0px;
@@ -208,6 +232,105 @@ p{
 [class |= dropdown]:hover .dropdown-content {
   display: block;
 }
+
+.game-2048 [id*=block] {	
+	vertical-align:top;
+	display: inline-block;
+	position: relative;
+	width: min(15vw,15vh);
+	height:min(15vw,15vh);
+	font-size: min(15vw,15vh);
+	text-align: center;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+.game-2048 [id*=row] {
+	width: min(60vw,60vh);
+	overflow: hidden;
+  font-size: 0;
+  margin: 0 auto; 
+}
+.game-2048 [id*=score] {
+	width: min(60vw,60vh);
+	position: relative;
+	font-size: min(5vw,5vh);
+	height:min(15vw,15vh);
+	overflow: hidden;
+	text-align: center;
+  margin: 0 auto; 
+}
+.game-2048[id*=score] > p {
+	line-height: min(15vw,15vh);
+}
+.game-2048 .blank{
+	border: 1px solid #e6e6e6;
+	background-color: #ffffff;
+  color:#000000;
+}
+.game-2048 .n2{
+	border: 1px solid #e6e6e6;
+	background-color: #e6e6e6;
+  color:#000000;
+}
+.game-2048 .n4{
+	border: 1px solid #e6e6e6;
+	background-color: #cccccc;
+  color:#000000;
+}
+.game-2048 .n8{
+	border: 1px solid #e6e6e6;
+	background-color: #B3B3B3;
+  color:#000000;
+}
+.game-2048 .n16{
+	border: 1px solid #e6e6e6;
+	background-color: #999999;
+  color:#000000;
+}
+.game-2048 .n32{
+	border: 1px solid #e6e6e6;
+	background-color: #808080;
+  color:#ffffff;
+}
+.game-2048 .n64{
+	border: 1px solid #e6e6e6;
+	background-color: #666666;
+  color:#ffffff;
+}
+.game-2048 .n128{
+	border: 1px solid #e6e6e6;
+	background-color: #4D4D4D;
+  color:#ffffff;
+}
+.game-2048 .n256{
+	border: 1px solid #e6e6e6;
+	background-color: #333333;
+  color:#ffffff;
+}
+.game-2048 .n512{
+	border: 1px solid #e6e6e6;
+	background-color: #1A1A1A;
+  color:#ffffff;
+}
+.game-2048 .n1024{
+	border: 1px solid #e6e6e6;
+	background-color: #000000;
+  color:#ffffff;
+}
+
+.game-2048 p {
+	margin: 0px;
+	font-size: min(10vw,10vh);
+	line-height:min(15vw,15vh);
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -216,9 +339,14 @@ p{
   Chí Bách Phạm
 </div>
 
-<h3 class = "message" style = "color:white;font-family: quyetthang;font-size: 20px;background-color: #333; margin : 0px;height :30px;white-space: pre-wrap;">                 So Empty! Click on a button for relevant project</h3>
+<!-- <h3 class = "message" style = "color:white;font-family: quyetthang;font-size: 20px;background-color: #333; margin : 0px;height :30px;white-space: pre-wrap;">                 So Empty! Click on a button for relevant project</h3> -->
 <div class="navbar">
-  <div class="dropdown-serious">
+  <div>
+    <a onclick="showProject(0);" class="navbarButton">Home</a>
+    <!-- <a onclick="showProject(1);changeStatus(1);" class="navbarButton">Publication</a> -->
+    <a onclick="showProject(1);" class="navbarButton">2048</a>
+  </div>
+  <!-- <div class="dropdown-serious">
     <a onclick="showProject(0);changeStatus(0);" class="navbarButton">Python</a>
   </div>
   <div class="dropdown-serious">
@@ -245,7 +373,7 @@ p{
   </div>
   <div class="dropdown-nonserious" style="display:none;">
     <a onclick="showProject(6);changeStatus(6);" class="navbarButton">Picture</a>
-  </div>
+  </div> -->
   <!--
   <div class="dropdown">
     <span style="color:white">Python</span>
@@ -301,34 +429,39 @@ p{
 <div class="row">
   <div class="side-serious">
     <h2>About Me</h2>
-    <img style ="display:block;margin:auto;max-width:50%;height:auto" src="pic.jpg" alt="Face">
-    <p>Master of Engineering Science student at Monash university</p>
+    <img style ="display:block;margin:auto;max-height:25vh;width:auto" src="pic2.jpg" alt="Face">
+    <p>Currently UKRI Research Fellow and PhD student at Dyson School of Design Engineering, Imperial College London</p>
+    <p>Teaching associate for DESE60004 and DESE60010 at Imperial College London </p>
     <p>Teaching associate for ECE2071, ECE2072, ECE3073 and ECE4132 at Monash university </p>
-    <p>Graduated in Bachelor of Electrical and Computer System Engineering (Honours) at Monash University in 2021</p>
+    <p>Graduated Master of Engineering Science and Bachelor of Electrical and Computer System Engineering (Honours) at Monash University in 2021</p>
     <p>Former student at Hanoi University of Science High School for Gifted Student</p>
     <p>From Hanoi, Vietnam</p>
-    <p>Currently base in Melbourne, Australia</p>
-    <a href="Resume.pdf" style = "color: white;text-decoration: none;border-radius: 3px;background: #fc9403;padding: 5px; border-style: solid;border-width: thin;" download target="_blank">Resume</a>
+    <p>Currently base in London, United Kingdom</p>
+    <!-- <a href="Resume.pdf" style = "color: white;text-decoration: none;border-radius: 3px;background: #555555;padding: 5px; border-style: solid;border-width: thin;" download target="_blank">Resume</a> -->
     <br>
     <br>
+    <a href ="https://scholar.google.co.uk/citations?user=tMrGwTgAAAAJ&hl=vi"target="_blank">
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto;border-radius:5px;" src="scholar.png"alt="github"></a>
     <a href ="https://www.linkedin.com/in/chi-bach-pham-8580b3195/"target="_blank">
-    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Linkedin.png"alt="github"></a>
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto;border-radius:5px;" src="Linkedin.png"alt="github"></a>
     <a href ="https://github.com/pcbach"target="_blank">
-    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Github.png"alt="github"></a>
-    <a href ="https://www.facebook.com/profile.php?id=100009350472829"target="_blank">
-    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Facebook.png"alt="github"></a>
-    <a href ="https://www.monash.edu/engineering/chibachpham"target="_blank">
-    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="monashlogo.png"alt="github"></a>
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto;border-radius:5px;" src="Github.png"alt="github"></a>
+    <!-- <a href ="https://www.facebook.com/profile.php?id=100009350472829"target="_blank">
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto" src="Facebook.png"alt="github"></a> -->
+    <a href ="https://profiles.imperial.ac.uk/c.pham24"target="_blank">
+    <img style ="display:inline-block;margin:auto;max-width:10%;height:auto;border-radius:5px;" src="imperial-600.png" alt="github"></a>
     
     <h3>Skills</h3>
-    <p class = "interest" >C/C++</p>
+    <p class = "interest" > C/C++</p>
     <p class = "interest" > Python</p>
     <p class = "interest" >  MATLAB</p>
     <p class = "interest" >  R</p>
     <p class = "interest" >  JavaScript</p>
     <p class = "interest" >   Julia</p>
-    <p class = "interest" >   LATEX</p>
+    <p class = "interest" >   LaTeX</p>
     <h3>Interest</h3>
+    <p class = "interest" >Network Science</p>
+    <p class = "interest" >Graph Theory</p>
     <p class = "interest" >Optimization</p>
     <p class = "interest" >Convex Optimization</p>
     <p class = "interest" >Machine Learning</p>
@@ -338,7 +471,7 @@ p{
 
 
 
-<div class="side-nonserious" style="display:none">
+<!-- <div class="side-nonserious" style="display:none">
     <h2>About Me</h2>
     <img style ="display:block;margin:auto;max-width:50%;height:auto" src="pic.jpg" alt="Face">
     <p>In my freetime, I also do photography and drawing. 
@@ -350,7 +483,7 @@ p{
     <p class = "interest" >Vexillology</p>
     <p class = "interest" >Typography</p>
     <p class = "interest" >Logo Design</p>
-  </div>
+  </div> -->
 
   <div class="main">
 
@@ -367,8 +500,8 @@ p{
     <p class = "interest" >Julia</p>
   </div>
 
-  <div id = "spgmle" class = "rlangProject" style = "display : none">
-    <h2>Covariance-constrained Gaussian Maximum Likelihood Estimation via semidefinite approximations (WIP)</h2>
+  <!-- <div id = "spgmle" class = "rlangProject" style = "display : none">
+    <h2>Covariance-constrained Gaussian Maximum Likelihood Estimation via semidefinite approximations</h2>
     <h5>Jan 19, 2022</h5>
     <a href="https://github.com/pcbach/SP-GMLE" target="_blank"> Repository </a>
     <p>Developed a semi-definite approximation of an interval of the Gaussian Maximum likelihood function using Gaussian quadrature. Enabling CVXR to solve the maximum likelihood estimation with option to add linear contraints on the covariance</p>
@@ -377,7 +510,7 @@ p{
     <p class = "interest" >Computational Mathematics</p>
     <p class = "interest" >Optimization</p>
     <p class = "interest" >R</p>
-  </div>
+  </div> -->
 
   <div id = "LGC" class = "pythonProject"style = "display : none">
     <h2>Semi-definite approximation of Gaussian Maximum likelihood function</h2>
@@ -397,7 +530,7 @@ p{
 
 
 
-    <div id = "FamilyTree" class = "pythonProject"style = "display : none">
+    <div id = "FamilyTree" class = "pythonProject" style = "display : none">
     <h2>Family Tree</h2>
     <h5>Jan 11, 2021</h5>
     <img style ="display:block;margin:auto;min-width:400px;max-width:30%;" src="giapha.png" alt="Giapha">
@@ -408,9 +541,74 @@ p{
     <p class = "interest" >Python</p>
 	</div>
 
+  <div id = "Publication" class = "home" style = "display : block">
+    <h2 style="font-size: 40px; font-family: CMU-Serif">Publication</h2>
+    <div class=publicationBox>
+      <p style="margin:0; font-size:20px"><a href="pham23a.pdf" download="pham23a.pdf" target="_blank" class=publicationDownload> A scalable Frank-wolfe-based algorithm for the Max-cut SDP</a></p>
+      <p style="text-indent: 10px; margin:0;">CB Pham, W Griggs, J Saunderson</p>
+      <p style="text-indent: 10px; margin:0;">International Conference on Machine Learning, 27822-27839</p>
+    </div>
+    <br>
+    <div class=publicationBox>
+      <p style= "margin:0; font-size:20px"><a href="2504.10709v1.pdf" download="2504.10709v1.pdf" target="_blank" class=publicationDownload>
+        Vehicle Dynamics Control for Simultaneous Optimization of Tire Emissions and Performance in EVs
+      </a> </p>
+      <p style="text-indent: 10px; margin:0;">CB Pham, HH Rafati, RN Shorten</p>
+      <p style="text-indent: 10px; margin:0;">arXiv preprint arXiv:2504.10709</p></div>
+	</div>
+  
+  <div id = "Repository" class = "home" style = "display : block">
+    <h2 style="font-size: 40px; font-family: CMU-Serif">Repository</h2>
+    <div class=publicationBox>
+      <p style="margin:0; font-size:20px"><a href="https://github.com/pcbach/SP-GMLE" target="_blank" class=publicationDownload>Covariance-constrained Gaussian Maximum Likelihood Estimation via semidefinite approximations</a></p>
+      <!-- <h5>Jan 19, 2022</h5> -->
+      <!-- <a href="https://github.com/pcbach/SP-GMLE" target="_blank"> Repository </a> -->
+      <p>R parser for CVXR to solve the maximum likelihood estimation with option to add linear contraints on the covariance. Achieved through a semi-definite approximation of an interval of the Gaussian Maximum likelihood function using Gaussian quadrature </p>
+    </div>  
+    <br>
+    <div class=publicationBox>
+      <p style="margin:0; font-size:20px"><a href="https://github.com/pcbach/SCAMSv2" target="_blank" class=publicationDownload>Memory efficient semi definite programming solver for Max-cut problem</a></p>
+      <!-- <h2>Memory efficient semi definite programming solver for Max-cut problem</h2> -->
+      <!-- <h5>Jul 13, 2022</h5> -->
+      <!-- <a href="https://github.com/pcbach/SCAMSv2" target="_blank"> Repository </a> -->
+      <!-- <p>Master degree project</p> -->
+      <p>Method to solve the maxcut problem with better memory efficiency</p>
+    </div>
+  </div>
+  
+
+
 
     
-
+  <div id = "2048" class = "game-2048" style = "display : none">
+    <div class="page-content">
+      <div id="score"></div>
+      <div id="row-1">
+          <div id="block1-1" class="blank"></div>
+          <div id="block1-2" class="blank"></div>
+          <div id="block1-3" class="blank"></div>
+          <div id="block1-4" class="blank"></div>
+      </div>
+      <div id="row-2">
+          <div id="block2-1" class="blank"></div>
+          <div id="block2-2" class="blank"></div>
+          <div id="block2-3" class="blank"></div>
+          <div id="block2-4" class="blank"></div>
+      </div>
+      <div id="row-3">
+          <div id="block3-1" class="blank"></div>
+          <div id="block3-2" class="blank"></div>
+          <div id="block3-3" class="blank"></div>
+          <div id="block3-4" class="blank"></div>
+      </div>
+      <div id="row-4">
+          <div id="block4-1" class="blank"></div>
+          <div id="block4-2" class="blank"></div>
+          <div id="block4-3" class="blank"></div>
+          <div id="block4-4" class="blank"></div>
+      </div>
+  </div>
+  </div>
     <div id = "imex" class = "matlabProject"style = "display : none">
     <h2>Imex localization</h2>
     <h5>May 18, 2020</h5>
@@ -422,19 +620,6 @@ p{
     <p class = "interest" >Optimization</p>
 	</div>
 
-
-
-
-    <div id = "2048" class = "jsProject" style = "display : none">
-    <h2>Fake 2048</h2>
-    <h5>Dec 14, 2017</h5>
-    <img style ="display:block;margin:auto;min-width:400px;max-width:30%;height:auto" src="2048.png" alt="imex">
-    <a href="https://github.com/pcbach/2048fake"target="_blank"> Repository </a>
-    <a href="https://fake2048.herokuapp.com/"target="_blank"> Website </a>
-    <p>Fake 2048</p>
-    <h3>Tag</h3>
-    <p class = "interest" >Javascript</p>
-	</div>
 
     <div id = "Quyetthang2" class = "fontProject" style = "display : none">
     <h2>CBP Quyetthang v2</h2>
@@ -477,98 +662,70 @@ p{
 </body>
 <script>
 function showProject(x) {
-  var topic = ["python","julia","rlang","matlab","js","font","picture"];
-  const collection = document.querySelectorAll('[class ^= '+topic[x]+']');
+  var topic = ["home","game-2048"];
   //console.log(collection);
+  for (let j = 0; j < topic.length; j++) {
+    const collection = document.querySelectorAll('[class ^= '+topic[j]+']');
+    for (let i = 0; i < collection.length; i++) {
+      var c = collection[i];
+      if (j==x){
+        console.log(collection)
+        c.style.display = "block";
+      }else{
+        c.style.display = "none";
+      }
+      /*(if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }*/
+    }
+  }
+  const collection = document.getElementsByClassName("navbarButton");
   for (let i = 0; i < collection.length; i++) {
-    var x = collection[i];
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
+    var c = collection[i];
+    //console.log(x);
+    if(i==x){
+      c.style.backgroundColor = "#eee";
+      c.style.color = "#333";
+    }else{
+      c.style.backgroundColor = "#333";
+      c.style.color = "#eee";
     }
   }
 }
-var clicked = [false,false,false,false,false,false,false];
+var clicked = [true,false,false,false,false,false,false];
 function changeStatus(x) {
-  if (x >= 0){
-    clicked[x] = !clicked[x];
+  if (x > 0){
+    for (let i = 0; i < clicked.length; i++) {
+      if(x == i){
+        clicked[i] = !clicked[i];
+      }else{
+        clicked[i] = false;
+      }
+    }
+  }else{
+    clicked[0] = true;
+    for (let i = 1; i < clicked.length; i++) {
+        clicked[i] = false;
+    }
   }
+  console.log(clicked);
   const collection = document.getElementsByClassName("navbarButton");
-  var check = true;
   for (let i = 0; i < collection.length; i++) {
     var x = collection[i];
     //console.log(x);
     if(clicked[i]){
-      x.style.color = "#fc9403";
-      check = false;
+      x.style.backgroundColor = "#eee";
+      x.style.color = "#333";
     }else{
-      x.style.color = "white";
+      x.style.backgroundColor = "#333";
+      x.style.color = "#eee";
     }
-  }
-  const msg = document.getElementsByClassName("message");
-  if(check){
-    msg[0].innerHTML = "                 So Empty! Click on a button for relevant project";
-  }else{
-    msg[0].innerHTML = " ";
   }
 
 }
-  var serious = true;
-  var split = 5;
-  function changeSerious() {
-    serious = !serious;
-    const collection = document.querySelectorAll('[class|= dropdown]');
-    for (let i = 0; i < collection.length; i++) {
-      var x = collection[i];
-      if(serious){
-        if (x.className === "dropdown-serious"){
-          x.style.display = "block";
-        }else if (x.className === "dropdown-nonserious"){
-          x.style.display = "none";
-        }
-      }else{
-        if (x.className === "dropdown-serious"){
-          x.style.display = "none";
-        }else if (x.className === "dropdown-nonserious"){
-          x.style.display = "block";
-        }
-      }
-    }
-    const collection2 = document.querySelectorAll('[class|= side]');
-    for (let i = 0; i < collection2.length; i++) {
-      var x = collection2[i];
-      if(serious){
-        if (x.className === "side-serious"){
-          x.style.display = "block";
-        }else if (x.className === "side-nonserious"){
-          x.style.display = "none";
-        }
-      }else{
-        if (x.className === "side-serious"){
-          x.style.display = "none";
-        }else if (x.className === "side-nonserious"){
-          x.style.display = "block";
-        }
-      }
-    }
-    if (!serious){
-      for (let i = 0; i < 5; i++) {
-        if (clicked[i]){
-          showProject(i);
-          changeStatus(i);
-        }
-      }
-    }else{
-      for (let i = 5; i < clicked.length; i++) {
-        if (clicked[i]){
-          showProject(i);
-          changeStatus(i);
-        }
-      }
-    }
-    
-  }
 </script>
 
+<script src="2048.js"></script>
 </html>
